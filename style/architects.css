@@ -7,6 +7,7 @@
 header {
     background-color: #FFF4E7;
     margin-bottom: 50px;
+    width: 100%;
 }
 
 .nav-container {
@@ -78,7 +79,8 @@ ul li a {
     padding: 13px 20px;
 }
 #sponsor{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
     padding: 40px 13%;
     gap: 7%;
 }
@@ -129,7 +131,8 @@ ul li a {
     margin-top: 30px;
 }
 #feature{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin: 50px 10%;
     gap: 100px;
 
@@ -140,11 +143,18 @@ ul li a {
     color: #727272;
     font-weight: 400;
 }
+.feature-main{
+    display: grid;
+    grid-template-columns: repeat(1, 1f);
+}
 .feature-card{
     margin: 30px 0px;
     padding: 30px;
     box-shadow: 0 4px 30px 0px  rgb(0, 0, 0 , 0.6);
     width: 90%;
+}
+.sponsor-pic{
+    width: 100%;
 }
 .feature-card .feature-title{
     font-size: 1.25rem;
@@ -179,20 +189,22 @@ ul li a {
     margin-bottom: 20px;
 }
 .fact-card{
-    display: flex;
-    margin: 50px 12%;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+     
+    margin: 50px 1%;
     justify-content: space-between;
     text-align: center;
     
 }
 .card-main{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(1 , 1fe);
     gap: 15px;
     border: 1px solid #FF900E;
     border-radius: 15px;
     padding: 45px 40px;
-    width: 20%;
+    width: 80%;
 }
 .card-main h2{
     font-size: 35px;
@@ -217,8 +229,8 @@ ul li a {
 }
 .sponsor-logo{
     
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
     align-items: center;
     justify-content: space-between;
     filter: grayscale(100%);
@@ -243,4 +255,119 @@ ul li a:hover{
     color: #FF900E;
     transform: scale(1.2);
     transition: all 0.5s ease-in;
+}
+
+
+
+
+@media screen and (max-width: 576px) {
+    body{
+        width: 100%;
+        margin: 0px;
+    }
+    .nav-container, ul{
+        flex-direction: column;
+    }
+    
+    .hero-container{
+        width: 99%;
+         
+    }
+    #sponsor{
+        flex-direction: column;
+    }
+    .sponsor-img{
+        grid-template-columns: repeat(1 , 1fr);
+        margin: 0px;
+        padding: 0px;
+    }
+    #feature{
+        flex-direction: column;
+    }
+    #feature img{
+        width: 100%;
+    }
+    #experience-bage{
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    .fact-title{
+        width: 95%;
+    }
+    .fact-card{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 10px;
+        margin: 0px;
+         
+    }
+    .card-main{
+        width: 100%;
+
+    }
+    .details-text{
+        width: 100%;
+        margin: 0px;
+    }
+    .sponsor-logo{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    header{
+        width: 100%;
+    }
+    .hero-container{
+        width: 100%;
+    }
+    .hero-container #normal-btn{
+        width: 25%;
+    }
+    #sponsor{
+        grid-template-columns: repeat(1 , 1fr);
+        width: 100%;
+    }
+    
+    .sponsor-img{
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+    }
+    #feature{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .feature-main{
+        grid-template-columns: repeat(1 , 1fr);
+    }
+    #fact{
+        width: 100%;
+    
+    }
+    .fact-card{
+        width: 100%;
+        margin: 0px;
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    .sponsor-logo{
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 20px;
+    }
+    .details-text{
+        margin: 0;
+        
+    }
+    .fact-title{
+        margin: 5%;
+        width: 100%;
+    }
+    .sponsor-pic img{
+        width: 80%;
+    }
+    #experience-bage{
+        padding: 17px;
+        top: 0;
+        right: 0;
+
+    }
 }
