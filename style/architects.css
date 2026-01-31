@@ -314,6 +314,7 @@ ul li a:hover{
         flex-direction: column;
         gap: 20px;
     }
+
 }
 @media screen and (min-width: 577px) and (max-width: 768px) {
     header{
